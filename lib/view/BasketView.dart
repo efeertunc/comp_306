@@ -54,7 +54,7 @@ class _BasketView extends State<BasketView> {
         onPressed: () {
           Map<Food, int> mergedCountMap = {}..addAll(Constants.foodCountMapLaunch)..addAll(Constants.foodCountMapDessert);
           for(Food food in []..addAll(Constants.launchList)..addAll(Constants.dessertList)){
-            context.read<BasketViewModel>().postOrder(mergedCountMap[food]! * food.unitPrice!, 2, food.foodId, mergedCountMap[food]!);
+            context.read<BasketViewModel>().postOrder(mergedCountMap[food]! * food.unitPrice!, Constants.user_id, food.foodId, mergedCountMap[food]!);
           }
           showDialog(
               context: context,

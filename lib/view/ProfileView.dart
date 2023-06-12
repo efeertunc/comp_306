@@ -1,3 +1,4 @@
+import 'package:comp_306/Constants.dart';
 import 'package:comp_306/cubit/MainViewModel.dart';
 import 'package:comp_306/cubit/ProfileViewModel.dart';
 import 'package:comp_306/repo/FoodRepository.dart';
@@ -65,7 +66,7 @@ class _ProfileViewState extends State<ProfileView> {
                     String address = _addressController.text;
                     context
                         .read<ProfileViewModel>()
-                        .updateProfile(1, name, password, address);
+                        .updateProfile(Constants.user_id, name, password, address);
                     print("profile update successfully");
                     showDialog(
                         context: context,
