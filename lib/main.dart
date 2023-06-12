@@ -1,4 +1,7 @@
+import 'package:comp_306/cubit/BasketViewModel.dart';
+import 'package:comp_306/cubit/DessertViewModel.dart';
 import 'package:comp_306/cubit/MainViewModel.dart';
+import 'package:comp_306/cubit/ProfileViewModel.dart';
 import 'package:comp_306/view/BottomNavBarView.dart';
 import 'package:comp_306/view/MainView.dart';
 import 'package:flutter/material.dart';
@@ -36,12 +39,11 @@ class _MyHomePageState extends State<MyHomePage> {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => MainViewModel()),
+        BlocProvider(create: (context) => DessertViewModel()),
+        BlocProvider(create: (context) => BasketViewModel()),
+        BlocProvider(create: (context) => ProfileViewModel()),
       ],
       child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: Text("comp306", style: TextStyle(color: Colors.black),),
-        ),
         body: BottomNavBarView(),
       ),
     );

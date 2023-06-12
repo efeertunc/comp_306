@@ -1,4 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permissin.INTERNET"/>
+
     <application
         android:label="comp_306"
         android:name="${applicationName}"
