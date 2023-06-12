@@ -12,4 +12,24 @@ class MainViewModel extends Cubit<FoodData> {
     var foodData = await repo.getAllLaunches();
     emit(foodData);
   }
+
+  Future<void> getAllLaunchesAZ() async {
+    var foodData = await repo.getAllLaunchesAZ();
+    emit(foodData);
+  }
+
+  Future<void> getAllLaunchesZA() async {
+    var foodData = await repo.getAllLaunchesZA();
+    emit(foodData);
+  }
+
+  Future<void> getAllLaunchesAscPrice() async {
+    var foodData = await repo.getAllLaunchesAscPrice();
+    emit(foodData);
+  }
+
+  Future<void> getAllLaunchesDescPrice() async {
+    var foodData = await repo.getAllLaunchesDescPrice();
+    emit(foodData);
+  }
 }

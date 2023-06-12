@@ -1,4 +1,6 @@
+import 'package:comp_306/view/BasketView.dart';
 import 'package:comp_306/view/MainView.dart';
+import 'package:comp_306/view/ProfileView.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
@@ -17,8 +19,8 @@ class _BottomNavBarView extends State<BottomNavBarView> {
   List<Widget> _buildScreens() {
     return [
       MainView(),
-      MainView(),
-      MainView(),
+      BasketView(),
+      ProfileView(),
     ];
   }
 
